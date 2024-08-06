@@ -10,11 +10,14 @@ class Responsive extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: ConstrainedBox(
-        constraints: const BoxConstraints(
-          maxWidth: 600,
+      child: Padding(
+        padding: const EdgeInsets.only(left:12,right: 12),
+        child: ConstrainedBox(
+          constraints: const BoxConstraints(
+            maxWidth: 600,
+          ),
+          child: child,
         ),
-        child: child,
       ),
     );
   }
